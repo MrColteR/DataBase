@@ -1,0 +1,18 @@
+﻿<Window x:Class="DetailSail.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DetailSail"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btSupplier" HorizontalAlignment="Left" Margin="29,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.503" Height="30" Width="110" Click="Supplier_Click" Content="Supplier" FontSize="18"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="670,360,0,0" VerticalAlignment="Top" FontSize="18" Width="80" Click="btClose_click"/>
+        <Button x:Name="btSupply" Content="Supply" HorizontalAlignment="Left" Margin="171,25,0,0" VerticalAlignment="Top" Height="30" Width="110" FontSize="18" Click="btSupply_click"/>
+        <Button x:Name="btDetails" Content="Details" HorizontalAlignment="Left" Margin="313,25,0,0" VerticalAlignment="Top" Height="30" Width="110" FontSize="18" Click="btDetails_click"/>
+        <Button x:Name="btHistory" Content="History" HorizontalAlignment="Left" Margin="454,25,0,0" VerticalAlignment="Top" Height="30" Width="110" FontSize="18" Click="btHistory_click"/>
+        <Button x:Name="btDetailInDelivery" Content="DetailInDelivery" HorizontalAlignment="Left" Margin="600,25,0,0" VerticalAlignment="Top" Height="30" Width="169" FontSize="18" Click="btDetailInDelivery_click"/>
+
+    </Grid>
+</Window>
