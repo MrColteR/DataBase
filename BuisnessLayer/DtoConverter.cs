@@ -185,7 +185,7 @@ namespace BuisnessLayer
             }
             DetailInDelivery detailInDelivery = new DetailInDelivery();
             detailInDelivery.Number = detailInDeliveryDto.Number;
-            detailInDelivery.SupplierID = detailInDeliveryDto.SupplierID;
+            detailInDelivery.SupplyID = detailInDeliveryDto.SupplyID;
             detailInDelivery.HistoryID = detailInDeliveryDto.HistoryID;
             detailInDelivery.DetailID = detailInDeliveryDto.DetailID;
             return detailInDelivery;
@@ -198,7 +198,7 @@ namespace BuisnessLayer
             }
             DetailInDeliveryDto detailInDeliveryDto = new DetailInDeliveryDto();
             detailInDeliveryDto.Number = detailInDelivery.Number;
-            detailInDeliveryDto.SupplierID = detailInDelivery.SupplierID;
+            detailInDeliveryDto.SupplyID = detailInDelivery.SupplyID;
             detailInDeliveryDto.HistoryID = detailInDelivery.HistoryID;
             detailInDeliveryDto.DetailID = detailInDelivery.DetailID;
             return detailInDeliveryDto;

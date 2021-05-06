@@ -7,7 +7,7 @@ namespace VRA.DataAccess.Entities
     public class DetailInDelivery
     {
         public int Number;
-        public int SupplierID;
+        public int SupplyID;
         public int HistoryID;
         public int DetailID;
     }

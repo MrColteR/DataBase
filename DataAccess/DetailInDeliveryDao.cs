@@ -12,7 +12,7 @@ namespace VRA.DataAccess
         {
             DetailInDelivery detailInDelivery = new DetailInDelivery();
             detailInDelivery.Number = reader.GetInt32(reader.GetOrdinal("Number"));
-            detailInDelivery.SupplierID = reader.GetInt32(reader.GetOrdinal("SupplierID"));
+            detailInDelivery.SupplyID = reader.GetInt32(reader.GetOrdinal("SupplyID"));
             detailInDelivery.HistoryID = reader.GetInt32(reader.GetOrdinal("HistoryID"));
             detailInDelivery.DetailID = reader.GetInt32(reader.GetOrdinal("DetailsID"));
 
