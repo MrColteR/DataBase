@@ -33,5 +33,9 @@ namespace BuisnessLayer
         {
             return DtoConverter.Convert(detailsDao.GetList());
         }
+        public IList<DetailsDto> SearchDetail(string Name)
+        {
+            return DtoConverter.Convert(detailsDao.SearchDetail(Name));
+        }
     }
 }

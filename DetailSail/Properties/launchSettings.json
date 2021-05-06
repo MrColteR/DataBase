@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "DetailSail": {
+      "commandName": "Project"
+    },
+    "newProfile1": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\Болеслав\\Desktop\\DataBase\\DetailSail\\bin\\Debug\\netcoreapp3.1\\DetailSail.exe",
+      "workingDirectory": "D:\\VSC\\VS\\GG\\DataBase"
+    }
+  }
+}

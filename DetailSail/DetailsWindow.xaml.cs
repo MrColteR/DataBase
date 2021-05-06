@@ -73,5 +73,12 @@ namespace DetailSail
             wnd.ShowDialog();
             UpdateWindow();
         }
+
+        private void btSearch_Click(object sender, RoutedEventArgs e)
+        {
+            SearchDetail wnd = new SearchDetail();
+            wnd.ShowDialog();
+            UpdateWindow();
+        }
     }
 }

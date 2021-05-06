@@ -12,5 +12,6 @@ namespace VRA.DataAccess
         public void Update(Details details);
         public void Delete(int DetailsID);
         public IList<Details> GetList();
+        public IList<Details> SearchDetail(string Name);
     }
 }

@@ -43,16 +43,19 @@ namespace DetailSail
                 return;
             }
 
+            string forSearch = tbName.Text;
+            ISupplierProcess searchSupplierProcess = ProcessFactory.GetSupplierProcess();
+            IList<SupplierDto> suppliers = searchSupplierProcess.SearchSupplier(forSearch);
+            dgSearchSupplier.ItemsSource = suppliers;
+
             if (supplierDto == null)
-            { 
+            {
                 supplierDto = new SupplierDto();
                 supplierDto.Name = tbName.Text;
 
                 ISupplierProcess supplierProcess = ProcessFactory.GetSupplierProcess();
                 supplierProcess.SearchSupplier(supplierDto.ToString());
             }
-
-            UpdateWindow();
         }
     }
 }
