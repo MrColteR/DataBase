@@ -12,5 +12,6 @@ namespace BuisnessLayer
         void Delete(int SupplierID);
         IList<SupplierDto> GetList();
         IList<SupplierDto> SearchSupplier(string Name);
+        IList<SupplierDto> ExportSupplier();
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BuisnessLayer;
 using VRA.Dto;
+using System.IO;
 
 namespace DetailSail
 {
@@ -74,11 +75,19 @@ namespace DetailSail
             UpdateWindow();
         }
 
-        private void dtSearch_Click(object sender, RoutedEventArgs e)
+        private void dtExport_Click(object sender, RoutedEventArgs e)
         {
-            SearchSupplier wnd = new SearchSupplier();
-            wnd.ShowDialog();
-            UpdateWindow();
+
+            ISupplierProcess supplierDto = ProcessFactory.GetSupplierProcess();
+            IList<SupplierDto> suppliers = supplierDto.ExportSupplier();
+
+            using (StreamWriter sw = new StreamWriter("*.csv"))
+            {
+                foreach (SupplierDto dir in suppliers)
+                {
+                    sw.WriteLine(dir.SupplierID + ";" + dir.Name + ";" + dir.Address + ";" dir.Phone);
+                }
+            }
         }
     }
 }

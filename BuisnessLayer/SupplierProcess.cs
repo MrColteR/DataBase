@@ -37,5 +37,9 @@ namespace BuisnessLayer
         {
             return DtoConverter.Convert(supplierDao.SearchSupplier(Name));
         }
+        public IList<SupplierDto> ExportSupplier()
+        {
+            return DtoConverter.Convert(supplierDao.ExportSupplier());
+        }
     }
 }

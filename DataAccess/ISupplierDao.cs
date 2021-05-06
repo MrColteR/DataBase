@@ -13,5 +13,6 @@ namespace VRA.DataAccess
         public void Delete(int SupplierID);
         public IList<Supplier> GetList();
         public IList<Supplier> SearchSupplier(string Name);
+        public IList<Supplier> ExportSupplier();
     }
 }

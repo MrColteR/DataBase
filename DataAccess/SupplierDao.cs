@@ -4,6 +4,7 @@ using System.Text;
 using VRA.DataAccess.Entities;
 using System.Data.SqlClient;
 
+
 namespace VRA.DataAccess
 {
     public class SupplierDao : BaseDao, ISupplierDao 
@@ -129,6 +130,26 @@ namespace VRA.DataAccess
                 }
             }
 
+            return supplier;
+        }
+        public IList<Supplier> ExportSupplier()
+        {
+            IList<Supplier> supplier = new List<Supplier>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT [SupplierID], [Name], [Address], [Phone] FROM [Supplier] ";
+                    using (var dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            supplier.Add(CreateSupplier(dataReader));
+                        }
+                    }
+                }
+            }
             return supplier;
         }
     }
