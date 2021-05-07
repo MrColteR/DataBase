@@ -82,6 +82,7 @@ namespace DetailSail
             FileStream fs = new FileStream(place, FileMode.CreateNew);
             using (StreamWriter sw = new StreamWriter(fs, Encoding.GetEncoding(1251))) // Encoding.GetEncoding(1251) для русского языка
             {
+                sw.WriteLine("SupplyID" + ";" + "Amount" + ";" + "Date" + ";" + "SupplierID");
                 foreach (SupplyDto dir in supply)
                 {
                     sw.WriteLine(dir.SupplyID + ";" + dir.Amount + ";" + dir.Date + ";" + dir.SupplierID);

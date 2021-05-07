@@ -83,16 +83,16 @@ namespace DetailSail
 
         private void btExport_Click(object sender, RoutedEventArgs e)
         {
-
             ISupplierProcess supplierDto = ProcessFactory.GetSupplierProcess();
             IList<SupplierDto> suppliers = supplierDto.ExportSupplier();
             string place = @"D:\VSC\VS\GG\ExportSupplierExcel.csv";
             FileStream fs = new FileStream(place, FileMode.CreateNew);
             using (StreamWriter sw = new StreamWriter(fs, Encoding.GetEncoding(1251))) // Encoding.GetEncoding(1251) для русского языка
             {
+                sw.WriteLine("SupplierID" + ";" + "Name" + ";" + "Address" + ";" + "Phone");
                 foreach (SupplierDto dir in suppliers)
                 {
-                    sw.WriteLine(dir.SupplierID + ";" + dir.Name.ToString() + ";" + dir.Address.ToString() + ";" + dir.Phone.ToString());
+                    sw.WriteLine(dir.SupplierID + ";" + dir.Name + ";" + dir.Address + ";" + dir.Phone);
                 }
             }
         }
