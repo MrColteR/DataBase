@@ -87,7 +87,8 @@ namespace DetailSail
             ISupplierProcess supplierDto = ProcessFactory.GetSupplierProcess();
             IList<SupplierDto> suppliers = supplierDto.ExportSupplier();
             string place = @"D:\VSC\VS\GG\ExportSupplierExcel.csv";
-            using (StreamWriter sw = new StreamWriter(place)) // Encoding.GetEncoding(1251) для русского языка
+            FileStream fs = new FileStream(place, FileMode.CreateNew);
+            using (StreamWriter sw = new StreamWriter(fs, Encoding.GetEncoding(1251))) // Encoding.GetEncoding(1251) для русского языка
             {
                 foreach (SupplierDto dir in suppliers)
                 {
