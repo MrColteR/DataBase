@@ -16,8 +16,8 @@
         <Button x:Name="dtAdd" Content="Add" HorizontalAlignment="Left" Margin="30,368,0,0" VerticalAlignment="Top" FontSize="18" Width="91" Click="btAdd_click"/>
         <Button x:Name="dtDelete" Content="Delete" HorizontalAlignment="Left" Margin="152,368,0,0" VerticalAlignment="Top" FontSize="18" Width="90" Click="dtDelete_Click"/>
         <Button x:Name="dtUpdate" Content="Update" HorizontalAlignment="Left" Margin="282,368,0,0" VerticalAlignment="Top" FontSize="18" Width="91" Click="dtUpdate_Click"/>
-        <Button x:Name="btSearch" Content="Search" HorizontalAlignment="Left" Margin="407,368,0,0" VerticalAlignment="Top" FontSize="18" Width="91" Click="dtSearch_Click" Height="28"/>
-        <Button x:Name="btExport" Content="Export" HorizontalAlignment="Left" Margin="530,368,0,0" VerticalAlignment="Top" FontSize="18" Width="91" Click="dtSearch_Click" Height="28"/>
+        <Button x:Name="btSearch" Content="Search" HorizontalAlignment="Left" Margin="407,368,0,0" VerticalAlignment="Top" FontSize="18" Width="91" Click="btExport_Click" Height="28"/>
+        <Button x:Name="btExport" Content="Export" HorizontalAlignment="Left" Margin="530,368,0,0" VerticalAlignment="Top" FontSize="18" Width="91" Click="btExport_Click" Height="28"/>
 
     </Grid>
 </Window>

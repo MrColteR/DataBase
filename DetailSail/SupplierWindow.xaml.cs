@@ -74,18 +74,24 @@ namespace DetailSail
             wnd.ShowDialog();
             UpdateWindow();
         }
+        private void dtSearch_Click(object sender, RoutedEventArgs e)
+        {
+            SearchSupplier wnd = new SearchSupplier();
+            wnd.ShowDialog();
+            UpdateWindow();
+        }
 
-        private void dtExport_Click(object sender, RoutedEventArgs e)
+        private void btExport_Click(object sender, RoutedEventArgs e)
         {
 
             ISupplierProcess supplierDto = ProcessFactory.GetSupplierProcess();
             IList<SupplierDto> suppliers = supplierDto.ExportSupplier();
-
-            using (StreamWriter sw = new StreamWriter("*.csv"))
+            string place = @"D:\VSC\VS\GG\ExportSupplierExcel.csv";
+            using (StreamWriter sw = new StreamWriter(place)) // Encoding.GetEncoding(1251) для русского языка
             {
                 foreach (SupplierDto dir in suppliers)
                 {
-                    sw.WriteLine(dir.SupplierID + ";" + dir.Name + ";" + dir.Address + ";" dir.Phone);
+                    sw.WriteLine(dir.SupplierID + ";" + dir.Name.ToString() + ";" + dir.Address.ToString() + ";" + dir.Phone.ToString());
                 }
             }
         }
