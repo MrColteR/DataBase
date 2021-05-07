@@ -79,6 +79,12 @@ namespace DetailSail
         {
             IHistoryPriceProcess supplyDto = ProcessFactory.GetHistoryPriceProcess();
             IList<HistoryPriceDto> supply = supplyDto.ExportHistory();
+            string oldFile = @"D:\VSC\VS\GG\ExportHistoryExcel.csv";
+            if (File.Exists(oldFile))
+            {
+                File.Delete(oldFile);
+            }
+
             string place = @"D:\VSC\VS\GG\ExportHistoryExcel.csv";
             FileStream fs = new FileStream(place, FileMode.CreateNew);
             using (StreamWriter sw = new StreamWriter(fs, Encoding.GetEncoding(1251))) // Encoding.GetEncoding(1251) для русского языка

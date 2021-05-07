@@ -79,6 +79,12 @@ namespace DetailSail
             ISupplyProcess supplyDto = ProcessFactory.GetSupplyProcess();
             IList<SupplyDto> supply = supplyDto.ExportSupply();
             string place = @"D:\VSC\VS\GG\ExportSupplyExcel.csv";
+            string oldFile = @"D:\VSC\VS\GG\ExportSupplyExcel.csv";
+            if (File.Exists(oldFile))
+            {
+                File.Delete(oldFile);
+            }
+
             FileStream fs = new FileStream(place, FileMode.CreateNew);
             using (StreamWriter sw = new StreamWriter(fs, Encoding.GetEncoding(1251))) // Encoding.GetEncoding(1251) для русского языка
             {

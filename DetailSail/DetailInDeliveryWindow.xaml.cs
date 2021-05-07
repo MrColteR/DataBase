@@ -40,6 +40,12 @@ namespace DetailSail
             IDetailInDeliveryProcess detailInDeliveryDto = ProcessFactory.GetDetailInDeliveryProcess();
             IList<DetailInDeliveryDto> detailInDelivery = detailInDeliveryDto.ExportDetailInDelivery();
             string place = @"D:\VSC\VS\GG\ExportDetailInDeliveryExcel.csv";
+            string oldFile = @"D:\VSC\VS\GG\ExportDetailInDeliveryExcel.csv";
+            if (File.Exists(oldFile))
+            {
+                File.Delete(oldFile);
+            }
+
             FileStream fs = new FileStream(place, FileMode.CreateNew);
             using (StreamWriter sw = new StreamWriter(fs, Encoding.GetEncoding(1251))) // Encoding.GetEncoding(1251) для русского языка
             {
