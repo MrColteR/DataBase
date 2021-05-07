@@ -9,5 +9,6 @@ namespace VRA.DataAccess
     {
         public DetailInDelivery Get(int Number);
         public IList<DetailInDelivery> GetList();
+        public IList<DetailInDelivery> ExportDetailInDelivery();
     }
 }

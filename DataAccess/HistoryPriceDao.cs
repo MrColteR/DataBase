@@ -109,5 +109,26 @@ namespace VRA.DataAccess
 
             return historyPrice;
         }
+        public IList<HistoryPrice> ExportHistory()
+        {
+            IList <HistoryPrice> historyPrice = new List<HistoryPrice>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT[HistoryID], [DateOfChangePrice], [NewPrice], [SupplierID], [DetailsID] FROM[HistoryPrice]";
+                    using (var dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            historyPrice.Add(CreateHistoryPrice(dataReader));
+                        }
+                    }
+                }
+            }
+
+            return historyPrice;
+        }
     }
 }

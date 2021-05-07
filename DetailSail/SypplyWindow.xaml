@@ -8,10 +8,11 @@
         Title="SypplyWindow" Height="450" Width="800">
     <Grid>
         <DataGrid x:Name="dgSupply" Margin="10,10,10,105"/>
-        <Button x:Name="btClose" Content="Close" HorizontalAlignment="Left" Margin="654,373,0,0" VerticalAlignment="Top" FontSize="18" Width="90" Click="btClose_click"/>
+        <Button x:Name="btClose" Content="Close" HorizontalAlignment="Left" Margin="661,366,0,0" VerticalAlignment="Top" FontSize="18" Width="90" Click="btClose_click"/>
         <Button x:Name="btDelete" Content="Delete" HorizontalAlignment="Left" Margin="178,366,0,0" VerticalAlignment="Top" FontSize="18" Width="90" Click="btDelete_Click"/>
         <Button x:Name="btUpdate" Content="Update" HorizontalAlignment="Left" Margin="310,366,0,0" VerticalAlignment="Top" FontSize="18" Width="90" Click="btUpdate_Click"/>
         <Button x:Name="btAdd" Content="Add" HorizontalAlignment="Left" Margin="40,366,0,0" VerticalAlignment="Top" FontSize="18" Width="90" Click="btAdd_Click"/>
+        <Button x:Name="btExport" Content="Export" HorizontalAlignment="Left" Margin="445,366,0,0" VerticalAlignment="Top" FontSize="18" Width="90" Click="btExport_Click"/>
 
     </Grid>
 </Window>

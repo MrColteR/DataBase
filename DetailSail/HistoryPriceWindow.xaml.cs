@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BuisnessLayer;
 using VRA.Dto;
+using System.IO;
 
 namespace DetailSail
 {
@@ -72,6 +73,21 @@ namespace DetailSail
             AddHistoryPrice wnd = new AddHistoryPrice(item);
             wnd.ShowDialog();
             UpdateWindow();
+        }
+
+        private void btExport_Click(object sender, RoutedEventArgs e)
+        {
+            IHistoryPriceProcess supplyDto = ProcessFactory.GetHistoryPriceProcess();
+            IList<HistoryPriceDto> supply = supplyDto.ExportHistory();
+            string place = @"D:\VSC\VS\GG\ExportHistoryExcel.csv";
+            FileStream fs = new FileStream(place, FileMode.CreateNew);
+            using (StreamWriter sw = new StreamWriter(fs, Encoding.GetEncoding(1251))) // Encoding.GetEncoding(1251) для русского языка
+            {
+                foreach (HistoryPriceDto dir in supply)
+                {
+                    sw.WriteLine(dir.HistoryID + ";" + dir.NewPrice + ";" + dir.DateOfChangePrice + ";" + dir.DetailsID + ";" + dir.SupplierID);
+                }
+            }
         }
     }
 }

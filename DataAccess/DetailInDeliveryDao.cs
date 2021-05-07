@@ -23,7 +23,7 @@ namespace VRA.DataAccess
             using (var conn = GetConnection())
             {
                 conn.Open();
-                using(var cmd = conn.CreateCommand())
+                using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = "SELECT [Number],[SupplyID],[HistoryID],[DetailsID] FROM [DetailInDelivery] WHERE [Number] = @Number";
                     cmd.Parameters.AddWithValue("@Number", Number);
@@ -61,6 +61,27 @@ namespace VRA.DataAccess
             }
 
             return detailInDelivery;
+        }
+        public IList<DetailInDelivery> ExportDetailInDelivery()
+        {
+            IList<DetailInDelivery> detailInDeliveries = new List<DetailInDelivery>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT [Number],[SupplyID],[HistoryID],[DetailsID] FROM [DetailInDelivery]";
+                    using (var dataReader = cmd.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            detailInDeliveries.Add(CreateDetailInDelivery(dataReader));
+                        }
+                    }
+                }
+            }
+
+            return detailInDeliveries;
         }
     }
 }

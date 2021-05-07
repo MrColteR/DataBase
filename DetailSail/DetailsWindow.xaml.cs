@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BuisnessLayer;
 using VRA.Dto;
+using System.IO;
 
 namespace DetailSail
 {
@@ -79,6 +80,21 @@ namespace DetailSail
             SearchDetail wnd = new SearchDetail();
             wnd.ShowDialog();
             UpdateWindow();
+        }
+
+        private void btExport_Click(object sender, RoutedEventArgs e)
+        {
+            IDetailsProcess detailsDto = ProcessFactory.GetDetailsProcess();
+            IList<DetailsDto> details = detailsDto.ExportDetails();
+            string place = @"D:\VSC\VS\GG\ExportDetailsExcel.csv";
+            FileStream fs = new FileStream(place, FileMode.CreateNew);
+            using (StreamWriter sw = new StreamWriter(fs, Encoding.GetEncoding(1251))) // Encoding.GetEncoding(1251) для русского языка
+            {
+                foreach (DetailsDto dir in details)
+                {
+                    sw.WriteLine(dir.DetailsID + ";" + dir.Name + ";" + dir.Note + ";" + dir.Article + ";" + dir.Price);
+                }
+            }
         }
     }
 }

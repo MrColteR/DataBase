@@ -12,5 +12,6 @@ namespace BuisnessLayer
         void Update(HistoryPriceDto historyPrice);
         void Delete(int HistoryID);
         IList<HistoryPriceDto> GetList();
+        IList<HistoryPriceDto> ExportHistory();
     }
 }

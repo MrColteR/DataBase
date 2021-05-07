@@ -11,13 +11,13 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <DataGrid/>
-        <Button x:Name="btClose" Content="Close&#xA;" HorizontalAlignment="Left" Margin="660,368,0,0" VerticalAlignment="Top" Height="28" Width="109" Click="btClose_click" RenderTransformOrigin="0.5,0.533" FontSize="18"/>
+        <Button x:Name="btClose" Content="Close&#xA;" HorizontalAlignment="Left" Margin="667,368,0,0" VerticalAlignment="Top" Height="28" Width="109" Click="btClose_click" RenderTransformOrigin="0.5,0.533" FontSize="18"/>
         <DataGrid x:Name="dgSupplier" Margin="10,10,10,105"/>
         <Button x:Name="dtAdd" Content="Add" HorizontalAlignment="Left" Margin="30,368,0,0" VerticalAlignment="Top" FontSize="18" Width="91" Click="btAdd_click"/>
-        <Button x:Name="dtDelete" Content="Delete" HorizontalAlignment="Left" Margin="152,368,0,0" VerticalAlignment="Top" FontSize="18" Width="90" Click="dtDelete_Click"/>
-        <Button x:Name="dtUpdate" Content="Update" HorizontalAlignment="Left" Margin="282,368,0,0" VerticalAlignment="Top" FontSize="18" Width="91" Click="dtUpdate_Click"/>
-        <Button x:Name="btSearch" Content="Search" HorizontalAlignment="Left" Margin="407,368,0,0" VerticalAlignment="Top" FontSize="18" Width="91" Click="btExport_Click" Height="28"/>
-        <Button x:Name="btExport" Content="Export" HorizontalAlignment="Left" Margin="530,368,0,0" VerticalAlignment="Top" FontSize="18" Width="91" Click="btExport_Click" Height="28"/>
+        <Button x:Name="dtDelete" Content="Delete" HorizontalAlignment="Left" Margin="156,368,0,0" VerticalAlignment="Top" FontSize="18" Width="90" Click="dtDelete_Click"/>
+        <Button x:Name="dtUpdate" Content="Update" HorizontalAlignment="Left" Margin="283,368,0,0" VerticalAlignment="Top" FontSize="18" Width="91" Click="dtUpdate_Click"/>
+        <Button x:Name="btSearch" Content="Search" HorizontalAlignment="Left" Margin="410,368,0,0" VerticalAlignment="Top" FontSize="18" Width="91" Click="btExport_Click" Height="28"/>
+        <Button x:Name="btExport" Content="Export" HorizontalAlignment="Left" Margin="540,368,0,0" VerticalAlignment="Top" FontSize="18" Width="91" Click="btExport_Click" Height="28"/>
 
     </Grid>
 </Window>

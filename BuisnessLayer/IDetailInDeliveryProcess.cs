@@ -9,5 +9,6 @@ namespace BuisnessLayer
     {
         DetailInDeliveryDto Get(int Number);
         IList<DetailInDeliveryDto> GetList();
+        IList<DetailInDeliveryDto> ExportDetailInDelivery();
     }
 }

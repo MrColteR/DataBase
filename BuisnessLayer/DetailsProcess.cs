@@ -37,5 +37,9 @@ namespace BuisnessLayer
         {
             return DtoConverter.Convert(detailsDao.SearchDetail(Name));
         }
+        public IList<DetailsDto> ExportDetails()
+        {
+            return DtoConverter.Convert(detailsDao.ExportDetails());
+        }
     }
 }

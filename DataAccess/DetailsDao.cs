@@ -133,5 +133,23 @@ namespace VRA.DataAccess
 
             return details;
         }
+        public IList<Details> ExportDetails()
+        {
+            IList<Details> details = new List<Details>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT [DetailsID], [Article], [Price], [Note], [Name] FROM [Details]";
+                    using (var dataReader = cmd.ExecuteReader())
+                    {
+                        details.Add(CreateDetails(dataReader));
+                    }
+                }
+            }
+
+            return details;
+        }
     }
 }

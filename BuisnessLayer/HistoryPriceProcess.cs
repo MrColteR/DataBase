@@ -33,5 +33,9 @@ namespace BuisnessLayer
         {
             return DtoConverter.Convert(historyPriceDao.GetList());
         }
+        public IList<HistoryPriceDto> ExportHistory()
+        {
+            return DtoConverter.Convert(historyPriceDao.ExportHistory());
+        }
     }
 }

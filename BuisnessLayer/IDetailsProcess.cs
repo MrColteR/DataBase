@@ -13,5 +13,6 @@ namespace BuisnessLayer
         void Delete(int DetailsID);
         IList<DetailsDto> GetList();
         IList<DetailsDto> SearchDetail(string Name);
+        IList<DetailsDto> ExportDetails();
     }
 }

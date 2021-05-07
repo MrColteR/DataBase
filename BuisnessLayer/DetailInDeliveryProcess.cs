@@ -21,5 +21,9 @@ namespace BuisnessLayer
         {
             return DtoConverter.Convert(detailInDeliveryDao.GetList());
         }
+        public IList<DetailInDeliveryDto> ExportDetailInDelivery()
+        {
+            return DtoConverter.Convert(detailInDeliveryDao.ExportDetailInDelivery());
+        }
     }
 }

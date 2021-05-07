@@ -12,5 +12,6 @@ namespace VRA.DataAccess
          public void Update(HistoryPrice historyPrice);
          public void Delete(int HistoryID);
          public IList<HistoryPrice> GetList();
+         public IList<HistoryPrice> ExportHistory();
     }
 }

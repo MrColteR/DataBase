@@ -12,5 +12,6 @@ namespace VRA.DataAccess
         public void Update(Supply supply);
         public void Delete(int SupplyID);
         public IList<Supply> GetList();
+        public IList<Supply> ExportSupply();
     }
 }

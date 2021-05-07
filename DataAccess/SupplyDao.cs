@@ -106,5 +106,26 @@ namespace VRA.DataAccess
 
             return supply;
         }
+        public IList<Supply> ExportSupply()
+        {
+            IList<Supply> supply = new List<Supply>();
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT[SupplyID], [SupplierID], [Amount], [Date] FROM[Supply]";
+                    using (var dataReader = cmd.ExecuteReader())
+                    {
+                        while(dataReader.Read())
+                        {
+                            supply.Add(CreateSupply(dataReader));
+                        }
+                    }
+                }
+            }
+
+            return supply;
+        }
     }
 }

@@ -12,5 +12,6 @@ namespace BuisnessLayer
         void Update(SupplyDto supply);
         void Delete(int SupplyID);
         IList<SupplyDto> GetList();
+        IList<SupplyDto> ExportSupply();
     }
 }
