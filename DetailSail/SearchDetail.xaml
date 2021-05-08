@@ -8,7 +8,7 @@
         Title="SearchDetail" Height="450" Width="800">
     <Grid>
         <DataGrid x:Name="dgSearchDetail" HorizontalAlignment="Center" Height="320" Margin="0,10,0,0" VerticalAlignment="Top" Width="780"/>
-        <Button x:Name="btSearch" Content="Search by Name" HorizontalAlignment="Left" Margin="253,367,0,0" VerticalAlignment="Top" Width="147" FontSize="18" Click="btSearch_Click"/>
+        <Button x:Name="btSearch" Content="Search " HorizontalAlignment="Left" Margin="253,367,0,0" VerticalAlignment="Top" Width="90" FontSize="18" Click="btSearch_Click"/>
         <Button x:Name="btClose" Content="Close" HorizontalAlignment="Left" Margin="652,367,0,0" VerticalAlignment="Top" Width="90" FontSize="18" Click="btClose_Click"/>
         <TextBox x:Name="tbName" HorizontalAlignment="Left" Margin="65,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="28" FontSize="18"/>
 

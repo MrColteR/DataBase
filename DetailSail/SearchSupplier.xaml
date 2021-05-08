@@ -10,7 +10,7 @@
         <DataGrid x:Name="dgSearchSupplier" Margin="10,10,10,105"/>
         <Button x:Name="btClose" Content="Close" HorizontalAlignment="Left" Margin="661,375,0,0" VerticalAlignment="Top" FontSize="18" Click="btClose_click" Width="90"/>
         <TextBox x:Name="tbName" HorizontalAlignment="Left" Margin="65,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18"/>
-        <Button x:Name="btSearch" Content="Search by Name" HorizontalAlignment="Left" Margin="256,374,0,0" VerticalAlignment="Top" FontSize="18" Click="btSearch_click" Width="144"/>
+        <Button x:Name="btSearch" Content="Search" HorizontalAlignment="Left" Margin="256,374,0,0" VerticalAlignment="Top" FontSize="18" Click="btSearch_click" Width="90"/>
 
     </Grid>
 </Window>
