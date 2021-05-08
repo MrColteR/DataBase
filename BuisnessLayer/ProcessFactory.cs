@@ -26,5 +26,9 @@ namespace BuisnessLayer
         {
             return new DetailInDeliveryProcess();
         }
+        public static IAllInfoProcess GetAllInfoProcess()
+        {
+            return new AllInfoProcess();
+        }
     }
 }

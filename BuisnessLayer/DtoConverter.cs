@@ -217,5 +217,48 @@ namespace BuisnessLayer
             return detailInDeliveryDto;
         }
         #endregion
+        #region AllInfo
+        public static AllInfo Convert(AllInfoDto allInfoDto)
+        {
+            if (allInfoDto == null)
+            {
+                return null;
+            }
+            AllInfo allInfo = new AllInfo();
+            allInfo.Name = allInfoDto.Name;
+            allInfo.Address = allInfoDto.Address;
+            allInfo.Phone = allInfoDto.Phone;
+            allInfo.Amount = allInfoDto.Amount;
+            allInfo.Date = allInfoDto.Date;
+            return allInfo;
+        }
+        public static AllInfoDto Convert(AllInfo allInfo)
+        {
+            if (allInfo == null)
+            {
+                return null;
+            }
+            AllInfoDto allInfoDto = new AllInfoDto();
+            allInfoDto.Name = allInfo.Name;
+            allInfoDto.Address = allInfo.Address;
+            allInfoDto.Phone = allInfo.Phone;
+            allInfoDto.Amount = allInfo.Amount;
+            allInfoDto.Date = allInfo.Date;
+            return allInfoDto;
+        }
+        public static IList<AllInfoDto> Convert(IList<AllInfo> allInfo)
+        {
+            if (allInfo == null)
+            {
+                return null;
+            }
+            IList<AllInfoDto> allInfoDto = new List<AllInfoDto>();
+            foreach (var item in allInfo)
+            {
+                allInfoDto.Add(Convert(item));
+            }
+            return allInfoDto;
+        }
+        #endregion
     }
 }

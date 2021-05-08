@@ -141,10 +141,13 @@ namespace VRA.DataAccess
                 conn.Open();
                 using (var cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT [DetailsID], [Article], [Price], [Note], [Name] FROM [Details]";
+                    cmd.CommandText = "SELECT[DetailsID], [Article], [Price], [Note], [Name] FROM[Details]";
                     using (var dataReader = cmd.ExecuteReader())
                     {
-                        details.Add(CreateDetails(dataReader));
+                        while (dataReader.Read())
+                        {
+                            details.Add(CreateDetails(dataReader));
+                        }
                     }
                 }
             }

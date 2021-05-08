@@ -59,5 +59,11 @@ namespace DetailSail
             DetailInDeliveryWindow wnd = new DetailInDeliveryWindow();
             wnd.ShowDialog();
         }
+
+        private void btAllInfo_Click(object sender, RoutedEventArgs e)
+        {
+            AllInfo wnd = new AllInfo();
+            wnd.ShowDialog();
+        }
     }
 }

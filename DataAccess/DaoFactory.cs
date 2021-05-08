@@ -27,5 +27,9 @@ namespace VRA.DataAccess
         {
             return new DetailInDeliveryDao();
         }
+        public static IAllInfoDao GetAllInfo()
+        {
+            return new AllInfoDao();
+        }
     }
 }
